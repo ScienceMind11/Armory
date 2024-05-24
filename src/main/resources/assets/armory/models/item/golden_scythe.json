@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "armory:item/scythe/gui/golden_scythe"
+  }
+}

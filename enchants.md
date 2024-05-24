@@ -1,0 +1,3 @@
+- Rending
+  - Applies `Bleeding` effect, which deals DoT
+-

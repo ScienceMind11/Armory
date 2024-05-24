@@ -8,14 +8,19 @@
 			"name": "Armory",
 			"description": "Pew pew stab stab",
 			"contributors": {
-				"Mercury": "Owner, Lead Developer",
-				"YBOUZL": "Lead Developer"
+				"Mercury": [
+					"Owner",
+					"Lead Developer"
+				],
+				"Ascilion": "Artist"
 			},
+			"license": "GPL-3.0-or-later",
 			"icon": "assets/armory/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "net.mercury.armory.ArmoryMod"
+			"init": "net.mercury.armory.ArmoryMod",
+			"client_init": "net.mercury.armory.ArmoryClient"
 		},
 		"depends": [
 			{

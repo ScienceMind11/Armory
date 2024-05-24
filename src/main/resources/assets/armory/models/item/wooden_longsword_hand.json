@@ -1,0 +1,6 @@
+{
+  "parent": "armory:item/longsword",
+  "textures": {
+    "layer0": "armory:item/longsword/wooden_longsword"
+  }
+}

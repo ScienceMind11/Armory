@@ -1,0 +1,6 @@
+{
+  "parent": "armory:item/dagger",
+  "textures": {
+    "layer0": "armory:item/dagger/wooden_dagger"
+  }
+}

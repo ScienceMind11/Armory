@@ -1,0 +1,32 @@
+{
+
+  "item.armory.wooden_scythe": "Wooden Scythe",
+  "item.armory.stone_scythe": "Stone Scythe",
+  "item.armory.iron_scythe": "Iron Scythe",
+  "item.armory.golden_scythe": "Golden Scythe",
+  "item.armory.diamond_scythe": "Diamond Scythe",
+  "item.armory.netherite_scythe": "Netherite Scythe",
+
+  "item.armory.wooden_longsword": "Wooden Longsword",
+  "item.armory.stone_longsword": "Stone Longsword",
+  "item.armory.iron_longsword": "Iron Longsword",
+  "item.armory.golden_longsword": "Golden Longsword",
+  "item.armory.diamond_longsword": "Diamond Longsword",
+  "item.armory.netherite_longsword": "Netherite Longsword",
+
+  "item.armory.wooden_dagger": "Wooden Dagger",
+  "item.armory.stone_dagger": "Stone Dagger",
+  "item.armory.iron_dagger": "Iron Dagger",
+  "item.armory.golden_dagger": "Golden Dagger",
+  "item.armory.diamond_dagger": "Diamond Dagger",
+  "item.armory.netherite_dagger": "Netherite Dagger",
+
+  "enchantment.armory.drain": "Drain",
+  "enchantment.armory.rending": "Rending",
+
+  "effect.armory.bleeding": "Bleeding",
+
+  "death.attack.bleeding": "%s bled to death by %s",
+  "death.attack.bleeding.item": "%s was bled dry by %s using %s"
+
+}

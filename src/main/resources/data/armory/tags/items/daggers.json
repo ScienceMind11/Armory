@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "armory:wooden_dagger",
+    "armory:stone_dagger",
+    "armory:iron_dagger",
+    "armory:golden_dagger",
+    "armory:diamond_dagger",
+    "armory:netherite_dagger"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "armory:wooden_scythe",
+    "armory:stone_scythe",
+    "armory:iron_scythe",
+    "armory:golden_scythe",
+    "armory:diamond_scythe",
+    "armory:netherite_scythe"
+  ]
+}

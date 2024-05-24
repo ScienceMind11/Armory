@@ -1,0 +1,23 @@
+package net.mercury.armory.item;
+
+import net.mercury.armory.ArmoryMod;
+import net.minecraft.client.util.ModelIdentifier;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.ToolMaterial;
+import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
+
+public class ScytheItem extends SwordItem {
+
+	private final ModelIdentifier handModel;
+
+	public ScytheItem(ToolMaterial toolMaterial, String handModelResourceLocation) {
+		super(toolMaterial, 6, -3.2F, new QuiltItemSettings().group(ItemGroup.COMBAT));
+		handModel = new ModelIdentifier(ArmoryMod.ID, handModelResourceLocation, "inventory");
+	}
+
+	public ModelIdentifier getHeldModel() {
+		return handModel;
+	}
+
+}

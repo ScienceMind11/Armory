@@ -1,5 +1,9 @@
 package net.mercury.armory;
 
+import net.mercury.armory.registry.ArmoryEffects;
+import net.mercury.armory.registry.ArmoryEnchantments;
+import net.mercury.armory.registry.ArmoryItems;
+import net.minecraft.entity.damage.DamageSource;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.slf4j.Logger;
@@ -14,6 +18,10 @@ public class ArmoryMod implements ModInitializer {
 
 	@Override
 	public void onInitialize(ModContainer mod) {
+
+		ArmoryItems.register();
+		ArmoryEnchantments.register();
+		ArmoryEffects.register();
 
 	}
 
