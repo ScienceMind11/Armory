@@ -1,6 +1,7 @@
 package net.mercury.armory.registry;
 
 import net.mercury.armory.ArmoryMod;
+import net.mercury.armory.item.DaggerItem;
 import net.mercury.armory.item.LongswordItem;
 import net.mercury.armory.item.ScytheItem;
 import net.minecraft.entity.EquipmentSlot;
@@ -31,12 +32,12 @@ public class ArmoryItems {
 	public static final Item DIAMOND_LONGSWORD = new LongswordItem(ToolMaterials.DIAMOND, "diamond_longsword_hand");
 	public static final Item NETHERITE_LONGSWORD = new LongswordItem(ToolMaterials.NETHERITE, "netherite_longsword_hand");
 
-	public static final Item WOODEN_DAGGER = new SwordItem(ToolMaterials.WOOD, 1, -1.3F, new QuiltItemSettings().group(ItemGroup.COMBAT));
-	public static final Item STONE_DAGGER = new SwordItem(ToolMaterials.STONE, 1, -1.3F, new QuiltItemSettings().group(ItemGroup.COMBAT));
-	public static final Item IRON_DAGGER = new SwordItem(ToolMaterials.IRON, 1, -1.3F, new QuiltItemSettings().group(ItemGroup.COMBAT));
-	public static final Item GOLDEN_DAGGER = new SwordItem(ToolMaterials.GOLD, 1, -1.3F, new QuiltItemSettings().group(ItemGroup.COMBAT));
-	public static final Item DIAMOND_DAGGER = new SwordItem(ToolMaterials.DIAMOND, 1, -1.3F, new QuiltItemSettings().group(ItemGroup.COMBAT));
-	public static final Item NETHERITE_DAGGER = new SwordItem(ToolMaterials.NETHERITE, 1, -1.3F, new QuiltItemSettings().group(ItemGroup.COMBAT));
+	public static final Item WOODEN_DAGGER = new DaggerItem(ToolMaterials.WOOD);
+	public static final Item STONE_DAGGER = new DaggerItem(ToolMaterials.STONE);
+	public static final Item IRON_DAGGER = new DaggerItem(ToolMaterials.IRON);
+	public static final Item GOLDEN_DAGGER = new DaggerItem(ToolMaterials.GOLD);
+	public static final Item DIAMOND_DAGGER = new DaggerItem(ToolMaterials.DIAMOND);
+	public static final Item NETHERITE_DAGGER = new DaggerItem(ToolMaterials.NETHERITE);
 
 	public static void register() {
 
