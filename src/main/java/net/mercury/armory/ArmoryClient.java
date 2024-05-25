@@ -1,6 +1,6 @@
 package net.mercury.armory;
 
-import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
+import net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin;
 import net.mercury.armory.item.LongswordItem;
 import net.mercury.armory.item.ScytheItem;
 import net.mercury.armory.registry.ArmoryItems;
@@ -13,16 +13,16 @@ public class ArmoryClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient(ModContainer mod) {
 
-		ModelLoadingRegistry.INSTANCE.registerModelProvider((resources, out) -> {
+		ModelLoadingPlugin.register((resources) -> {
 
 			for(Item item : ArmoryItems.scythes) {
 				assert item instanceof ScytheItem;
-				out.accept(((ScytheItem) item).getHeldModel());
+				resources.addModels(((ScytheItem) item).getHeldModel());
 			}
 
 			for(Item item : ArmoryItems.longswords) {
 				assert item instanceof LongswordItem;
-				out.accept(((LongswordItem) item).getHeldModel());
+				resources.addModels(((LongswordItem) item).getHeldModel());
 			}
 
 		});

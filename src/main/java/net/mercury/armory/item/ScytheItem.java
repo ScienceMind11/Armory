@@ -19,7 +19,7 @@ public class ScytheItem extends SwordItem {
 	private final ModelIdentifier handModel;
 
 	public ScytheItem(ToolMaterial toolMaterial, String handModelResourceLocation) {
-		super(toolMaterial, 4, -2.6F, new QuiltItemSettings().group(ItemGroup.COMBAT));
+		super(toolMaterial, 4, -2.6F, new QuiltItemSettings());
 		handModel = new ModelIdentifier(ArmoryMod.ID, handModelResourceLocation, "inventory");
 	}
 

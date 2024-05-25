@@ -7,6 +7,7 @@ import net.minecraft.client.render.item.ItemModels;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.BakedModel;
 import net.minecraft.client.render.model.json.ModelTransformation;
+import net.minecraft.client.render.model.json.ModelTransformationMode;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
 import org.quiltmc.loader.api.minecraft.ClientOnly;
@@ -25,9 +26,9 @@ public class ItemRendererMixin {
 	private ItemModels models;
 
 	@ModifyVariable(method = "renderItem", at = @At("HEAD"), argsOnly = true)
-	private BakedModel armory$changeItemModel(BakedModel model, ItemStack stack, ModelTransformation.Mode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, BakedModel modelAgain) {
+	private BakedModel armory$changeItemModel(BakedModel model, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, BakedModel modelAgain) {
 
-		boolean isHeld = !(renderMode == ModelTransformation.Mode.GROUND || renderMode == ModelTransformation.Mode.GUI || renderMode == ModelTransformation.Mode.FIXED);
+		boolean isHeld = !(renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.FIXED);
 
 		if(isHeld && stack.getItem() instanceof ScytheItem item) {
 			return models.getModelManager().getModel(item.getHeldModel());

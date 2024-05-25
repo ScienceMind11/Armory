@@ -5,8 +5,9 @@ import net.mercury.armory.enchantment.Drain;
 import net.mercury.armory.enchantment.Reaping;
 import net.mercury.armory.enchantment.Rending;
 import net.minecraft.enchantment.Enchantment;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class ArmoryEnchantments {
 
@@ -23,7 +24,7 @@ public class ArmoryEnchantments {
 	}
 
 	public static void registerEnchantment(String id, Enchantment enchantment) {
-		Registry.register(Registry.ENCHANTMENT, new Identifier(ArmoryMod.ID, id), enchantment);
+		Registry.register(Registries.ENCHANTMENT, new Identifier(ArmoryMod.ID, id), enchantment);
 	}
 
 }

@@ -8,7 +8,7 @@ import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 public class DaggerItem extends SwordItem {
 
 	public DaggerItem(ToolMaterial toolMaterial) {
-		super(toolMaterial, 1, -1.3F, new QuiltItemSettings().group(ItemGroup.COMBAT));
+		super(toolMaterial, 1, -1.3F, new QuiltItemSettings());
 	}
 
 }

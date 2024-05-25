@@ -6,8 +6,9 @@ import net.mercury.armory.item.LongswordItem;
 import net.mercury.armory.item.ScytheItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterials;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,7 +65,7 @@ public class ArmoryItems {
 	}
 
 	public static Item registerItem(String id, Item item) {
-		return Registry.register(Registry.ITEM, new Identifier(ArmoryMod.ID, id), item);
+		return Registry.register(Registries.ITEM, new Identifier(ArmoryMod.ID, id), item);
 	}
 
 }
