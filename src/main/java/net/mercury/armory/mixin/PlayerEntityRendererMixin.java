@@ -23,13 +23,14 @@ public abstract class PlayerEntityRendererMixin {
 
 		if(main.getItem() instanceof LongswordItem) {
 
-			boolean shield = player.getOffHandStack().getItem() == Items.SHIELD;
+			boolean offhandEmpty = player.getOffHandStack().getItem() == Items.AIR;
+			boolean shield = player.getOffHandStack().getItem() == Items.SHIELD && offhandEmpty;
 			boolean blocking = player.isBlocking() && shield;
 
 			if(blocking) {
 				cir.setReturnValue(BipedEntityModel.ArmPose.BLOCK);
 			} else {
-				cir.setReturnValue(shield ? BipedEntityModel.ArmPose.ITEM : BipedEntityModel.ArmPose.CROSSBOW_CHARGE);
+				cir.setReturnValue(offhandEmpty ? BipedEntityModel.ArmPose.ITEM : BipedEntityModel.ArmPose.CROSSBOW_CHARGE);
 			}
 
 		}
