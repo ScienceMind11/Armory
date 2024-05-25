@@ -1,0 +1,34 @@
+{
+
+  "item.armory.wooden_scythe": "Holzsense",
+  "item.armory.stone_scythe": "Steinsense",
+  "item.armory.iron_scythe": "Eisensense",
+  "item.armory.golden_scythe": "Goldsense",
+  "item.armory.diamond_scythe": "Diamantsense",
+  "item.armory.netherite_scythe": "Netheritesense",
+
+  "item.armory.wooden_longsword": "Holzlangschwert",
+  "item.armory.stone_longsword": "Steinlangschwert",
+  "item.armory.iron_longsword": "Eisenlangschwert",
+  "item.armory.golden_longsword": "Goldlangschwert",
+  "item.armory.diamond_longsword": "Diamantlangschwert",
+  "item.armory.netherite_longsword": "Netheritelangschwert",
+
+  "item.armory.wooden_dagger": "Holzdolch",
+  "item.armory.stone_dagger": "Steindolch",
+  "item.armory.iron_dagger": "Eisendolch",
+  "item.armory.golden_dagger": "Golddolch",
+  "item.armory.diamond_dagger": "Diamantdolch",
+  "item.armory.netherite_dagger": "Netheritedolch",
+
+  "enchantment.armory.drain": "Aussaugen",
+  "enchantment.armory.rending": "Verbluten",
+  "enchantment.armory.reaping": "Einholen",
+
+  "effect.armory.bleeding": "Bluten",
+
+  "death.attack.bleeding": "%s ist verblutet",
+  "death.attack.bleeding.player": "%s hat wegen %s all sein Blut verloren",
+  "death.attack.bleeding.item": "%s ist verblutet wegen %s wärend er %s benutzete"
+
+}

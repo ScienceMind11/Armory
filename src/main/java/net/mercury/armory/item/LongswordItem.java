@@ -16,6 +16,11 @@ public class LongswordItem extends SwordItem {
 		handModel = new ModelIdentifier(ArmoryMod.ID, handModelResourceLocation, "inventory");
 	}
 
+	public LongswordItem(ToolMaterial toolMaterial, String handModelResourceLocation, Settings settings) {
+		super(toolMaterial, 8, -3.4F, settings.group(ItemGroup.COMBAT));
+		handModel = new ModelIdentifier(ArmoryMod.ID, handModelResourceLocation, "inventory");
+	}
+
 	public ModelIdentifier getHeldModel() {
 		return handModel;
 	}

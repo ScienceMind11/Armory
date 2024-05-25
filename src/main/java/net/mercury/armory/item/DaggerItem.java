@@ -11,4 +11,8 @@ public class DaggerItem extends SwordItem {
 		super(toolMaterial, 1, -1.3F, new QuiltItemSettings().group(ItemGroup.COMBAT));
 	}
 
+	public DaggerItem(ToolMaterial toolMaterial, Settings settings) {
+		super(toolMaterial, 1, -1.3F, settings.group(ItemGroup.COMBAT));
+	}
+
 }
