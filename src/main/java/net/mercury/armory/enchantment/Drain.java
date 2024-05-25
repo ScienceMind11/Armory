@@ -7,7 +7,6 @@ import net.minecraft.entity.DamageUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.item.SwordItem;
 
 public class Drain extends Enchantment {
 
@@ -27,12 +26,11 @@ public class Drain extends Enchantment {
 
 			int armor = attacked.getArmor();
 			double toughness = attacked.getAttributeValue(EntityAttributes.GENERIC_ARMOR_TOUGHNESS);
-			float damage = (((SwordItem) user.getStackInHand(user.getActiveHand()).getItem()).getAttackDamage());
+			double damage = user.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE);
 
-			user.heal(DamageUtil.getDamageLeft(damage, (float) armor, (float) toughness));
+			user.heal(0.5F * DamageUtil.getDamageLeft((float) damage, (float) armor, (float) toughness));
 
 		}
-
 
 		super.onTargetDamaged(user, target, level);
 

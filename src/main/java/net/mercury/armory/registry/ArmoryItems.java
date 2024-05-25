@@ -4,11 +4,10 @@ import net.mercury.armory.ArmoryMod;
 import net.mercury.armory.item.DaggerItem;
 import net.mercury.armory.item.LongswordItem;
 import net.mercury.armory.item.ScytheItem;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ToolMaterials;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 import java.util.ArrayList;
 import java.util.List;

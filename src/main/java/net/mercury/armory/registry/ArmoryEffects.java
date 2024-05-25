@@ -2,8 +2,6 @@ package net.mercury.armory.registry;
 
 import net.mercury.armory.ArmoryMod;
 import net.mercury.armory.effect.Bleeding;
-import net.mercury.armory.enchantment.Drain;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectType;
 import net.minecraft.util.Identifier;

@@ -27,7 +27,8 @@
 
   "effect.armory.bleeding": "Bleeding",
 
-  "death.attack.bleeding": "%s bled to death by %s",
+  "death.attack.bleeding": "%s bled to death",
+  "death.attack.bleeding.player": "%s was bled dry by %s",
   "death.attack.bleeding.item": "%s was bled dry by %s using %s"
 
 }
