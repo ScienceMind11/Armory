@@ -1,0 +1,34 @@
+{
+
+  "item.armory.wooden_scythe": "Faux en bois",
+  "item.armory.stone_scythe": "Faux en pierre",
+  "item.armory.iron_scythe": "Faux en fer",
+  "item.armory.golden_scythe": "Faux en or",
+  "item.armory.diamond_scythe": "Faux en diamant",
+  "item.armory.netherite_scythe": "Faux en netherite",
+
+  "item.armory.wooden_longsword": "Épée-longue en bois",
+  "item.armory.stone_longsword": "Épée-longue en pierre",
+  "item.armory.iron_longsword": "Épée-longue en fer",
+  "item.armory.golden_longsword": "Épée-longue en or",
+  "item.armory.diamond_longsword": "Épée-longue en diamant",
+  "item.armory.netherite_longsword": "Épée-longue en netherite",
+
+  "item.armory.wooden_dagger": "Dagues en bois",
+  "item.armory.stone_dagger": "Dagues en pierre",
+  "item.armory.iron_dagger": "Dagues en fer",
+  "item.armory.golden_dagger": "Dagues en or",
+  "item.armory.diamond_dagger": "Dagues en diamant",
+  "item.armory.netherite_dagger": "Dagues en netherite",
+
+  "enchantment.armory.drain": "Vidange",
+  "enchantment.armory.rending": "Déchirement",
+  "enchantment.armory.reaping": "Fauchage",
+
+  "effect.armory.bleeding": "Hémorragie",
+
+  "death.attack.bleeding": "%s a saigné jusqu'à mourrir",
+  "death.attack.bleeding.player": "%s fut saigné à blanc par %s",
+  "death.attack.bleeding.item": "%s fut saigné à blanc %s en utilisant %s"
+
+}
