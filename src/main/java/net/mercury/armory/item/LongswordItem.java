@@ -5,24 +5,27 @@ import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.util.Identifier;
+import org.quiltmc.loader.api.minecraft.ClientOnly;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 public class LongswordItem extends SwordItem {
 
-	private final ModelIdentifier handModel;
+	private final Identifier handModel;
 
 	public LongswordItem(ToolMaterial toolMaterial, String handModelResourceLocation) {
 		super(toolMaterial, 8, -3.4F, new QuiltItemSettings());
-		handModel = new ModelIdentifier(ArmoryMod.ID, handModelResourceLocation, "inventory");
+		handModel = new Identifier(ArmoryMod.ID, handModelResourceLocation);
 	}
 
 	public LongswordItem(ToolMaterial toolMaterial, String handModelResourceLocation, Settings settings) {
 		super(toolMaterial, 8, -3.4F, settings);
-		handModel = new ModelIdentifier(ArmoryMod.ID, handModelResourceLocation, "inventory");
+		handModel = new Identifier(ArmoryMod.ID, handModelResourceLocation);
 	}
 
+	@ClientOnly
 	public ModelIdentifier getHeldModel() {
-		return handModel;
+		return new ModelIdentifier(handModel, "inventory");
 	}
 
 }

@@ -11,25 +11,28 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Vec3d;
+import org.quiltmc.loader.api.minecraft.ClientOnly;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
 public class ScytheItem extends SwordItem {
 
-	private final ModelIdentifier handModel;
+	private final Identifier handModel;
 
 	public ScytheItem(ToolMaterial toolMaterial, String handModelResourceLocation) {
 		super(toolMaterial, 4, -2.6F, new QuiltItemSettings());
-		handModel = new ModelIdentifier(ArmoryMod.ID, handModelResourceLocation, "inventory");
+		handModel = new Identifier(ArmoryMod.ID, handModelResourceLocation);
 	}
 
 	public ScytheItem(ToolMaterial toolMaterial, String handModelResourceLocation, Settings settings) {
 		super(toolMaterial, 4, -2.6F, settings);
-		handModel = new ModelIdentifier(ArmoryMod.ID, handModelResourceLocation, "inventory");
+		handModel = new Identifier(ArmoryMod.ID, handModelResourceLocation);
 	}
 
+	@ClientOnly
 	public ModelIdentifier getHeldModel() {
-		return handModel;
+		return new ModelIdentifier(handModel, "inventory");
 	}
 
 	@Override
