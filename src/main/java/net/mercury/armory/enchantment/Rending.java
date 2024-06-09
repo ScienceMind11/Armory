@@ -1,5 +1,6 @@
 package net.mercury.armory.enchantment;
 
+import net.mercury.armory.item.LongswordItem;
 import net.mercury.armory.item.ScytheItem;
 import net.mercury.armory.registry.ArmoryEffects;
 import net.mercury.armory.utils.EnchantmentSlots;
@@ -34,7 +35,7 @@ public class Rending extends Enchantment {
 
 	@Override
 	public boolean isAcceptableItem(ItemStack stack) {
-		return stack.getItem() instanceof ScytheItem;
+		return stack.getItem() instanceof ScytheItem || stack.getItem() instanceof LongswordItem;
 	}
 
 }

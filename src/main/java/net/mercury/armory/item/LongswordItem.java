@@ -14,12 +14,12 @@ public class LongswordItem extends SwordItem {
 	private final Identifier handModel;
 
 	public LongswordItem(ToolMaterial toolMaterial, String handModelResourceLocation) {
-		super(toolMaterial, 8, -3.4F, new QuiltItemSettings().group(ItemGroup.COMBAT));
+		super(toolMaterial, 8, -3.3F, new QuiltItemSettings().group(ItemGroup.COMBAT));
 		handModel = new Identifier(ArmoryMod.ID, handModelResourceLocation);
 	}
 
 	public LongswordItem(ToolMaterial toolMaterial, String handModelResourceLocation, Settings settings) {
-		super(toolMaterial, 8, -3.4F, settings.group(ItemGroup.COMBAT));
+		super(toolMaterial, 8, -3.3F, settings.group(ItemGroup.COMBAT));
 		handModel = new Identifier(ArmoryMod.ID, handModelResourceLocation);
 	}
 
