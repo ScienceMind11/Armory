@@ -28,7 +28,7 @@ public class Drain extends Enchantment {
 			double toughness = attacked.getAttributeValue(EntityAttributes.GENERIC_ARMOR_TOUGHNESS);
 			double damage = user.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE);
 
-			user.heal(0.5F * DamageUtil.getDamageLeft((float) damage, (float) armor, (float) toughness));
+			user.heal(0.1F * (level / 2.0F) * DamageUtil.getDamageLeft((float) damage, (float) armor, (float) toughness));
 
 		}
 

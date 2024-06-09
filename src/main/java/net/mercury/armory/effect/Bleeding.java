@@ -13,12 +13,12 @@ public class Bleeding extends StatusEffect {
 
 	@Override
 	public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-		entity.damage(ArmoryDamageSource.of(entity.getWorld(), ArmoryDamageSource.BLEEDING), (amplifier / 3.0F));
+		entity.damage(ArmoryDamageSource.of(entity.getWorld(), ArmoryDamageSource.BLEEDING), amplifier);
 	}
 
 	@Override
 	public boolean canApplyUpdateEffect(int duration, int amplifier) {
-		return duration % 3 == 0;
+		return duration % 20 == 0;
 	}
 
 }

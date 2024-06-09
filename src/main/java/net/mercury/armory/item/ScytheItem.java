@@ -21,12 +21,12 @@ public class ScytheItem extends SwordItem {
 	private final Identifier handModel;
 
 	public ScytheItem(ToolMaterial toolMaterial, String handModelResourceLocation) {
-		super(toolMaterial, 4, -2.6F, new QuiltItemSettings());
+		super(toolMaterial, 4, -2.7F, new QuiltItemSettings());
 		handModel = new Identifier(ArmoryMod.ID, handModelResourceLocation);
 	}
 
 	public ScytheItem(ToolMaterial toolMaterial, String handModelResourceLocation, Settings settings) {
-		super(toolMaterial, 4, -2.6F, settings);
+		super(toolMaterial, 4, -2.7F, settings);
 		handModel = new Identifier(ArmoryMod.ID, handModelResourceLocation);
 	}
 
@@ -41,14 +41,16 @@ public class ScytheItem extends SwordItem {
 		boolean valid = !(target instanceof EnderDragonEntity || target instanceof ShulkerEntity);
 		if(!valid) return super.postHit(stack, target, attacker);
 
-		if(EnchantmentHelper.getEquipmentLevel(ArmoryEnchantments.REAPING, attacker) > 0) {
+		int level = EnchantmentHelper.getEquipmentLevel(ArmoryEnchantments.REAPING, attacker);
+		if(level > 0) {
 
 			float yaw = attacker.getYaw();
 			float pitch = attacker.getPitch();
 
 			Vec3d result = Vec3d.fromPolar(pitch, yaw)
-				.multiply(-1.0F)
-				.add(target.getVelocity());
+				.negate()
+				.add(target.getVelocity())
+				.multiply(level);
 
 			if(!attacker.isOnGround() || !target.isOnGround()) {
 				target.setVelocity(result);
