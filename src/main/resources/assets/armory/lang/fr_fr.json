@@ -22,11 +22,11 @@
   "item.armory.netherite_dagger": "Dagues en netherite",
 
   "enchantment.armory.drain": "Vidange",
-  "enchantment.armory.drain.desc": "Heals user when damage is dealt; health gained is proportional to damage dealt.",
+  "enchantment.armory.drain.desc": "Vous guéris quand vous attaquez; Les points de vie obtenus sont proportionnels au dégâts infligés.",
   "enchantment.armory.rending": "Déchirement",
-  "enchantment.armory.rending.desc": "Afflicts the target with the Bleeding effect, slowly lowering their health as they bleed out.",
+  "enchantment.armory.rending.desc": "Afflige le joueur cible avec Hémorragie, qui vide petit à petit ses points de vie.",
   "enchantment.armory.reaping": "Fauchage",
-  "enchantment.armory.reaping.desc": "Pulls the target in towards the user; can be used to fling the target in the air if performed properly.",
+  "enchantment.armory.reaping.desc": "Rapproche votre cible plus près de vous; peut être utilisé pour lancer votre cible dans l'air.",
 
   "effect.armory.bleeding": "Hémorragie",
 
