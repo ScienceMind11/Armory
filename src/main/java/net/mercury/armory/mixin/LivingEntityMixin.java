@@ -11,6 +11,7 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
@@ -18,12 +19,12 @@ import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 public class LivingEntityMixin {
 
 	@WrapWithCondition(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;takeKnockback(DDD)V"))
-	public boolean damage(LivingEntity instance, double strength, double x, double z, DamageSource source, float amount) {
+	public boolean armory$removeKnockback(LivingEntity instance, double strength, double x, double z, DamageSource source, float amount) {
 		return source != ArmoryDamageSource.BLEEDING;
 	}
 
 	@ModifyExpressionValue(method = "damage", at = @At(value = "FIELD", target = "Lnet/minecraft/entity/LivingEntity;maxHurtTime:I", opcode = 180))
-	public int damage(int original, DamageSource source, float amount) {
+	public int armory$cancelInvincibility(int original, DamageSource source, float amount) {
 
 		if(source.getSource() != null && (source.getSource() instanceof PlayerEntity || source.getSource() instanceof MobEntity)) {
 

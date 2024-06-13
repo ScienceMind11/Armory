@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "armory:item/longsword/mercury_claymore"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [ 0, -90, 45 ],
+      "translation": [ 0, 9.0, 3.5 ],
+      "scale": [ 1.4875, 1.4875, 0.85 ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [ 0, 90, -45 ],
+      "translation": [ 0, 9.0, 3.5 ],
+      "scale": [ 1.4875, 1.4875, 0.85 ]
+    },
+    "firstperson_righthand": {
+      "rotation": [ 0, -90, 25 ],
+      "translation": [ 1.13, 3.2, 1.13 ],
+      "scale": [ 1.19, 1.19, 0.68 ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [ 0, 90, -25 ],
+      "translation": [ 1.13, 3.2, 1.13 ],
+      "scale": [ 1.19, 1.19, 0.68 ]
+    }
+  }
+}

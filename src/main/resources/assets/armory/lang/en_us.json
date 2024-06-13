@@ -21,12 +21,19 @@
   "item.armory.diamond_dagger": "Diamond Dagger",
   "item.armory.netherite_dagger": "Netherite Dagger",
 
+  "item.armory.mercury_scythe": "Mercury's Scythe",
+  "item.armory.mercury_claymore": "Mercury's Claymore",
+
+  "item.armory.mercurial_crystal": "Mercurial Crystal",
+
   "enchantment.armory.drain": "Drain",
   "enchantment.armory.drain.desc": "Heals user when damage is dealt; health gained is proportional to damage dealt.",
   "enchantment.armory.rending": "Rending",
   "enchantment.armory.rending.desc": "Afflicts the target with the Bleeding effect, slowly lowering their health as they bleed out.",
   "enchantment.armory.reaping": "Reaping",
   "enchantment.armory.reaping.desc": "Pulls the target in towards the user; can be used to fling the target in the air if performed properly.",
+  "enchantment.armory.step": "Step",
+  "enchantment.armory.step.desc": "Allows the user to step through walls, unless they are of a... certain material.",
 
   "effect.armory.bleeding": "Bleeding",
 

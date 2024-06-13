@@ -1,10 +1,9 @@
 package net.mercury.armory.registry;
 
 import net.mercury.armory.ArmoryMod;
-import net.mercury.armory.item.DaggerItem;
-import net.mercury.armory.item.LongswordItem;
-import net.mercury.armory.item.ScytheItem;
+import net.mercury.armory.item.*;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ToolMaterials;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -39,6 +38,11 @@ public class ArmoryItems {
 	public static final Item DIAMOND_DAGGER = new DaggerItem(ToolMaterials.DIAMOND);
 	public static final Item NETHERITE_DAGGER = new DaggerItem(ToolMaterials.NETHERITE, new QuiltItemSettings().fireproof());
 
+	public static final Item MERCURY_SCYTHE = new MercuryScytheItem(ToolMaterials.NETHERITE, "mercury_scythe_hand");
+	public static final Item MERCURY_CLAYMORE = new MercuryClaymoreItem(ToolMaterials.NETHERITE, "mercury_claymore_hand");
+
+	public static final Item MERCURIAL_CRYSTAL = new Item(new QuiltItemSettings().group(ItemGroup.MATERIALS));
+
 	public static void register() {
 
 		scythes.add(registerItem("wooden_scythe", WOODEN_SCYTHE));
@@ -61,6 +65,11 @@ public class ArmoryItems {
 		registerItem("golden_dagger", GOLDEN_DAGGER);
 		registerItem("diamond_dagger", DIAMOND_DAGGER);
 		registerItem("netherite_dagger", NETHERITE_DAGGER);
+
+		scythes.add(registerItem("mercury_scythe", MERCURY_SCYTHE));
+		longswords.add(registerItem("mercury_claymore", MERCURY_CLAYMORE));
+
+		registerItem("mercurial_crystal", MERCURIAL_CRYSTAL);
 
 	}
 

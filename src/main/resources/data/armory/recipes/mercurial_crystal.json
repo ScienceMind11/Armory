@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#*#",
+    "*n*",
+    "#*#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:small_amethyst_bud"
+    },
+    "*": {
+      "item": "minecraft:blaze_powder"
+    },
+    "n": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "armory:mercurial_crystal",
+    "count": 3
+  }
+}
