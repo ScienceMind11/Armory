@@ -6,13 +6,20 @@
 		"version": "${version}",
 		"metadata": {
 			"name": "Armory",
-			"description": "Pew pew stab stab",
+			"description": "Lots of weapons!",
 			"contributors": {
 				"Mercury": [
 					"Owner",
 					"Lead Developer"
 				],
-				"Ascilion": "Artist"
+				"Avery": [
+					"Artist",
+					"Designer"
+				],
+				"Ascilion": [
+					"Artist",
+					"Designer"
+				]
 			},
 			"license": "GPL-3.0-or-later",
 			"icon": "assets/armory/icon.png"

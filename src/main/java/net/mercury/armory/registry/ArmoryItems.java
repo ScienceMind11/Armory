@@ -18,11 +18,13 @@ public class ArmoryItems {
 	public static List<Item> scythes = new ArrayList<>();
 	public static List<Item> longswords = new ArrayList<>();
 
-	public static final Item WOODEN_SCYTHE = new ScytheItem(ToolMaterials.WOOD, "wooden_scythe_hand");
-	public static final Item STONE_SCYTHE = new ScytheItem(ToolMaterials.STONE, "stone_scythe_hand");
+//	public static final Item WOODEN_SCYTHE = new ScytheItem(ToolMaterials.WOOD, "wooden_scythe_hand");
+//	public static final Item STONE_SCYTHE = new ScytheItem(ToolMaterials.STONE, "stone_scythe_hand");
+
+//	public static final Item GOLDEN_SCYTHE = new ScytheItem(ToolMaterials.GOLD, "golden_scythe_hand");
+//	public static final Item DIAMOND_SCYTHE = new ScytheItem(ToolMaterials.DIAMOND, "diamond_scythe_hand");
+
 	public static final Item IRON_SCYTHE = new ScytheItem(ToolMaterials.IRON, "iron_scythe_hand");
-	public static final Item GOLDEN_SCYTHE = new ScytheItem(ToolMaterials.GOLD, "golden_scythe_hand");
-	public static final Item DIAMOND_SCYTHE = new ScytheItem(ToolMaterials.DIAMOND, "diamond_scythe_hand");
 	public static final Item NETHERITE_SCYTHE = new ScytheItem(ToolMaterials.NETHERITE, "netherite_scythe_hand", new QuiltItemSettings().fireproof());
 
 	public static final Item WOODEN_LONGSWORD = new LongswordItem(ToolMaterials.WOOD, "wooden_longsword_hand");
@@ -41,11 +43,13 @@ public class ArmoryItems {
 
 	public static void register() {
 
-		scythes.add(registerItem("wooden_scythe", WOODEN_SCYTHE));
-		scythes.add(registerItem("stone_scythe", STONE_SCYTHE));
+//		scythes.add(registerItem("wooden_scythe", WOODEN_SCYTHE));
+//		scythes.add(registerItem("stone_scythe", STONE_SCYTHE));
+
+//		scythes.add(registerItem("golden_scythe", GOLDEN_SCYTHE));
+//		scythes.add(registerItem("diamond_scythe", DIAMOND_SCYTHE));
+
 		scythes.add(registerItem("iron_scythe", IRON_SCYTHE));
-		scythes.add(registerItem("golden_scythe", GOLDEN_SCYTHE));
-		scythes.add(registerItem("diamond_scythe", DIAMOND_SCYTHE));
 		scythes.add(registerItem("netherite_scythe", NETHERITE_SCYTHE));
 
 		longswords.add(registerItem("wooden_longsword", WOODEN_LONGSWORD));
