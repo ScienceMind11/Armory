@@ -1,17 +1,20 @@
 {
-	"required": true,
-	"minVersion": "0.8",
-	"package": "net.mercury.armory.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.starfall.armory.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "ItemStackMixin",
     "LivingEntityMixin",
+    "MobEntityMixin",
+    "PlayerEntityMixin",
     "WitherSkeletonEntityMixin"
   ],
-	"client": [
+  "client": [
     "ItemRendererMixin",
     "PlayerEntityRendererMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

@@ -1,11 +1,6 @@
 {
 
-  "item.armory.wooden_scythe": "Holzsense",
-  "item.armory.stone_scythe": "Steinsense",
-  "item.armory.iron_scythe": "Eisensense",
-  "item.armory.golden_scythe": "Goldsense",
-  "item.armory.diamond_scythe": "Diamantsense",
-  "item.armory.netherite_scythe": "Netheritesense",
+  "item.armory.scythe": "Sense",
 
   "item.armory.wooden_longsword": "Holzlangschwert",
   "item.armory.stone_longsword": "Steinlangschwert",

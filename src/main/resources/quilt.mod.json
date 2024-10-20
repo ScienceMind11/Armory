@@ -1,7 +1,7 @@
 {
 	"schema_version": 1,
 	"quilt_loader": {
-		"group": "net.mercury",
+		"group": "io.starfall",
 		"id": "armory",
 		"version": "${version}",
 		"metadata": {
@@ -26,8 +26,8 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "net.mercury.armory.ArmoryMod",
-			"client_init": "net.mercury.armory.ArmoryClient"
+			"init": "io.starfall.armory.ArmoryMod",
+			"client_init": "io.starfall.armory.ArmoryClient"
 		},
 		"depends": [
 			{

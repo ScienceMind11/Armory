@@ -1,11 +1,6 @@
 {
 
-  "item.armory.wooden_scythe": "Faux en bois",
-  "item.armory.stone_scythe": "Faux en pierre",
-  "item.armory.iron_scythe": "Faux en fer",
-  "item.armory.golden_scythe": "Faux en or",
-  "item.armory.diamond_scythe": "Faux en diamant",
-  "item.armory.netherite_scythe": "Faux en netherite",
+  "item.armory.scythe": "Faux",
 
   "item.armory.wooden_longsword": "Épée-longue en bois",
   "item.armory.stone_longsword": "Épée-longue en pierre",

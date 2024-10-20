@@ -1,6 +1,0 @@
-{
-  "parent": "armory:item/scythe",
-  "textures": {
-    "layer0": "armory:item/scythe/diamond_scythe"
-  }
-}

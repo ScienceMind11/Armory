@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "armory:item/scythe/gui/scythe"
+    "layer0": "armory:item/scythe/gui/devilsknife"
   }
 }
