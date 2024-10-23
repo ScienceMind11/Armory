@@ -1,6 +1,7 @@
 package io.starfall.armory.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
+import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
@@ -13,11 +14,17 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin {
+
+	@Shadow
+	@Nullable
+	private LivingEntity attacker;
 
 	@WrapWithCondition(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;takeKnockback(DDD)V"))
 	public boolean armory$removeBleedingKnockback(LivingEntity instance, double strength, double x, double z, DamageSource source, float amount) {
@@ -51,6 +58,18 @@ public class LivingEntityMixin {
 			return original.call(damage, armor * (1.0F - (0.07F * level)), armorToughness);
 		}
 		return original.call(damage, armor, armorToughness);
+	}
+
+	@ModifyReturnValue(method = "getXpToDrop", at = @At(value = "RETURN"))
+	public int armory$increaseHarvestXp(int original) {
+
+		if(attacker == null) return original;
+
+		int enchantLevel = EnchantmentHelper.getEquipmentLevel(ArmoryEnchantments.HARVEST, attacker);
+		if(enchantLevel == 0) return original;
+
+		return original + (enchantLevel * 3);
+
 	}
 
 }

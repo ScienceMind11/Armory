@@ -25,6 +25,8 @@ public class ArmoryEnchantments {
 		registerEnchantment("toss", TOSS);
 		registerEnchantment("cleaving", CLEAVING);
 		registerEnchantment("reaver", REAVER);
+		registerEnchantment("harvest", HARVEST);
+		registerEnchantment("trickster", TRICKSTER);
 
 	}
 

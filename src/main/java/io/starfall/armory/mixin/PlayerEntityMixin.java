@@ -1,6 +1,5 @@
 package io.starfall.armory.mixin;
 
-import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
@@ -17,8 +16,7 @@ import net.minecraft.util.math.MathHelper;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(PlayerEntity.class)
 public class PlayerEntityMixin {
@@ -50,16 +48,16 @@ public class PlayerEntityMixin {
 		return (PlayerEntity) (Object) this;
 	}
 
-	@ModifyReturnValue(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/enchantment/EnchantmentHelper;getAttackDamage(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/EntityGroup;)F", ordinal = 0, shift = At.Shift.AFTER))
-	public float armory$tricksterEnchantPlayerEntity(float original, Entity target, CallbackInfo ci) {
+	@ModifyVariable(method = "attack", at = @At("STORE"), ordinal = 1)
+	public float armory$tricksterEnchantPlayerEntity(float g, Entity target) {
 
 		if(EnchantmentHelper.getEquipmentLevel(ArmoryEnchantments.TRICKSTER, self()) > 0) {
 			for(StatusEffectInstance ignored : ((LivingEntity)target).getStatusEffects()) {
-				original += 1;
+				g += 1;
 			}
 		}
 
-		return original;
+		return g;
 
 	}
 

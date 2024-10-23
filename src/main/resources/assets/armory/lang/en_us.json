@@ -27,6 +27,11 @@
   "enchantment.armory.cleaving": "Cleaving",
   "enchantment.armory.cleaving.desc": "Gives your scythe armor piercing capabilities, ignoring a certain percentage of armor points of those attacked.",
   "enchantment.armory.reaver": "Reaver",
+  "enchantment.armory.reaver.desc": "Steals all status effects from the target.",
+  "enchantment.armory.harvest": "Harvest",
+  "enchantment.armory.harvest.desc": "Increases experience drops from targets.",
+  "enchantment.armory.trickster": "Trickster",
+  "enchantment.armory.trickster.desc": "Deals extra damage to the target for every status effect they have.",
 
   "effect.armory.bleeding": "Bleeding",
 
