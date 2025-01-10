@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "armory",
+  "version": "${version}",
+  "name": "Armory",
+  "description": "A mod that adds a lot of weaponry",
+  "authors": [
+    "Mercury",
+    "Avery",
+    "Ascilion",
+    "Krimson"
+  ],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/armory/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.mercury.armory.Armory"
+    ],
+    "client": [
+      "net.mercury.armory.ArmoryClient"
+    ]
+  },
+  "mixins": [
+    "armory.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
