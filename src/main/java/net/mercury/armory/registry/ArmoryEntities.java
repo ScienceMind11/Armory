@@ -12,7 +12,7 @@ import net.minecraft.registry.Registry;
 
 public class ArmoryEntities {
 
-    public static final EntityType<ScytheEntity> SCYTHE = registerEntity(
+    public static final EntityType<ScytheEntity> SCYTHE = entity(
             "scythe",
             SpawnGroup.MISC,
             1.0F, 1.0F,
@@ -20,16 +20,22 @@ public class ArmoryEntities {
     );
 
     public static void register() {
-        Armory.LOGGER.info("Registered scythe entity");
+
+        registerEntity("scythe", SCYTHE);
+
     }
 
-    public static <T extends Entity> EntityType<T> registerEntity(String name, SpawnGroup group, float width, float height, boolean fireImmune) {
+    public static void registerEntity(String name, EntityType<?> entityType) {
+        Registry.register(Registries.ENTITY_TYPE, Armory.id(name), entityType);
+    }
+
+    public static <T extends Entity> EntityType<T> entity(String name, SpawnGroup group, float width, float height, boolean fireImmune) {
 
         EntityType.Builder<T> builder = EntityType.Builder.create(group);
         if(fireImmune) builder.makeFireImmune();
         builder.dimensions(width, height);
 
-        return Registry.register(Registries.ENTITY_TYPE, Armory.id(name), builder.build(name));
+        return builder.build(name);
 
     }
 

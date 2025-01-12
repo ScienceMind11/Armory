@@ -3,6 +3,8 @@ package net.mercury.armory.entity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.mercury.armory.Armory;
+import net.mercury.armory.registry.ArmoryItems;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderer;
@@ -23,13 +25,8 @@ import net.minecraft.util.math.Vec3d;
 @Environment(EnvType.CLIENT)
 public class ScytheEntityRenderer extends EntityRenderer<ScytheEntity> {
 
-    private final ItemRenderer itemRenderer;
-    private final BakedModelManager modelManager;
-
     public ScytheEntityRenderer(EntityRendererFactory.Context ctx) {
         super(ctx);
-        this.itemRenderer = ctx.getItemRenderer();
-        this.modelManager = ctx.getModelManager();
     }
 
     @Override
@@ -46,23 +43,24 @@ public class ScytheEntityRenderer extends EntityRenderer<ScytheEntity> {
 
             ItemStack stack = entity.asItemStack();
 
-            Vec3d translation = Vec3d.fromPolar(entity.getPitch(), entity.getYaw());
-            matrices.translate(entity.getX(), entity.getY(), entity.getZ());
+//            Vec3d translation = Vec3d.fromPolar(entity.getPitch(), entity.getYaw());
+//            matrices.translate(entity.getX(), entity.getY(), entity.getZ());
+//
+//            float lerpedYaw = MathHelper.lerp(tickDelta, entity.prevYaw, entity.getYaw());
+//            float lerpedPitch = MathHelper.lerp(tickDelta, entity.prevPitch, entity.getPitch());
+//
+//            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(lerpedYaw - 180.0F));
+//            matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(lerpedPitch - 90.0F));
 
-            float lerpedYaw = MathHelper.lerp(tickDelta, entity.prevYaw, entity.getYaw());
-            float lerpedPitch = MathHelper.lerp(tickDelta, entity.prevPitch, entity.getPitch());
-
-            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(lerpedYaw - 180.0F));
-            matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(lerpedPitch - 90.0F));
-
+            ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
             itemRenderer.renderItem(
-                    stack,
+                    ArmoryItems.SCYTHE.getDefaultStack(),
                     ModelTransformationMode.FIRST_PERSON_RIGHT_HAND,
                     light,
                     OverlayTexture.DEFAULT_UV,
                     matrices,
                     vertexConsumers,
-                    entity.getWorld(),
+                    MinecraftClient.getInstance().world,
                     0
             );
 
