@@ -37,24 +37,26 @@ public class ScytheEntityRenderer extends EntityRenderer<ScytheEntity> {
     @Override
     public void render(ScytheEntity entity, float yaw, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light) {
 
-        if(!(entity.getOwner() instanceof LivingEntity livingEntity)) return;
-
         matrices.push();
 
             ItemStack stack = entity.asItemStack();
 
-//            Vec3d translation = Vec3d.fromPolar(entity.getPitch(), entity.getYaw());
-//            matrices.translate(entity.getX(), entity.getY(), entity.getZ());
-//
-//            float lerpedYaw = MathHelper.lerp(tickDelta, entity.prevYaw, entity.getYaw());
-//            float lerpedPitch = MathHelper.lerp(tickDelta, entity.prevPitch, entity.getPitch());
-//
-//            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(lerpedYaw - 180.0F));
-//            matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(lerpedPitch - 90.0F));
+            float lerpedYaw = MathHelper.lerp(tickDelta, entity.prevYaw, entity.getYaw());
+            float lerpedPitch = MathHelper.lerp(tickDelta, entity.prevPitch, entity.getPitch());
+
+            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(lerpedYaw - 180.0F));
+            matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(lerpedPitch - 90.0F));
+            matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(-90.0F));
+
+            long worldTime = entity.getWorld().getTime();
+            float rotation = (worldTime + tickDelta) * -5;
+            if(!(entity.isInsideWall() || entity.isOnGround())) matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(rotation));
+
+            matrices.translate(0.5F, -0.1F, 0.0F);
 
             ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
             itemRenderer.renderItem(
-                    ArmoryItems.SCYTHE.getDefaultStack(),
+                    stack,
                     ModelTransformationMode.FIRST_PERSON_RIGHT_HAND,
                     light,
                     OverlayTexture.DEFAULT_UV,

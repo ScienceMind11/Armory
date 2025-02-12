@@ -39,6 +39,7 @@ public class ScytheItem extends SwordItem implements SeparateTransform {
         entity.setYaw(user.getYaw());
         entity.setPitch(user.getPitch());
         entity.pickupType = PersistentProjectileEntity.PickupPermission.DISALLOWED;
+        entity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 2.5F, 1.0F);
 
         world.spawnEntity(entity);
 
