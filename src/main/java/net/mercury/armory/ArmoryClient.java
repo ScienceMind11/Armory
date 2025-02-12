@@ -23,6 +23,7 @@ public class ArmoryClient implements ClientModInitializer {
 
         });
 
+        Armory.LOGGER.info("Register entity renderer");
         EntityRendererRegistry.register(ArmoryEntities.SCYTHE, ScytheEntityRenderer::new);
 
         ParticleFactoryRegistry.getInstance().register(ArmoryParticles.SILVER_SWEEP_ATTACK, SweepAttackParticle.Factory::new);
