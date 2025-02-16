@@ -16,7 +16,7 @@ public class ArmoryEntities {
             ScytheEntity::new,
             "scythe",
             SpawnGroup.MISC,
-            1.0F, 1.0F,
+            0.5F, 0.5F,
             true
     );
 

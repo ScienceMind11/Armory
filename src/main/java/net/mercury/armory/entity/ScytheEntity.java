@@ -2,6 +2,7 @@ package net.mercury.armory.entity;
 
 import net.mercury.armory.registry.ArmoryEntities;
 import net.mercury.armory.registry.ArmoryItems;
+import net.mercury.armory.registry.ArmorySounds;
 import net.minecraft.client.render.entity.ItemEntityRenderer;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -15,6 +16,7 @@ import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.entity.projectile.thrown.ThrownEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
@@ -42,19 +44,24 @@ public class ScytheEntity extends PersistentProjectileEntity {
         return new ItemStack(ArmoryItems.SCYTHE);
     }
 
-    @Override
-    protected void onBlockHit(BlockHitResult blockHitResult) {
-
-        Direction direction = blockHitResult.getSide();
-        setVelocity(new Vec3d(direction.getUnitVector()).multiply(2.5F));
-
-        super.onBlockHit(blockHitResult);
-
-    }
+//    @Override
+//    protected void onBlockHit(BlockHitResult blockHitResult) {
+//
+//        Direction direction = blockHitResult.getSide();
+//        setVelocity(new Vec3d(direction.getUnitVector()).multiply(2.5F));
+//
+//        super.onBlockHit(blockHitResult);
+//
+//    }
 
     @Override
     protected ItemStack asItemStack() {
         return stack;
+    }
+
+    @Override
+    protected SoundEvent getHitSound() {
+        return ArmorySounds.SCYTHE_HIT;
     }
 
 }

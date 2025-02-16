@@ -3,6 +3,7 @@ package net.mercury.armory;
 import net.fabricmc.api.ModInitializer;
 import net.mercury.armory.registry.ArmoryEntities;
 import net.mercury.armory.registry.ArmoryItems;
+import net.mercury.armory.registry.ArmorySounds;
 import net.minecraft.util.Identifier;
 import org.apache.logging.log4j.LogManager;
 import org.slf4j.Logger;
@@ -19,6 +20,7 @@ public class Armory implements ModInitializer {
 
         ArmoryItems.register();
         ArmoryEntities.register();
+        ArmorySounds.register();
 
         LOGGER.info("Successfully loaded");
 

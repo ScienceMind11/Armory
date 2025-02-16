@@ -1,17 +1,14 @@
 {
   "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "armory:item/scythe/scythe"
-  },
   "display": {
     "thirdperson_righthand": {
-      "rotation": [ 0, -90, 55 ],
-      "translation": [ 0, 6.0, 1.5 ],
+      "rotation": [ 0, -90, 45 ],
+      "translation": [ 0, 8.0, 2.0 ],
       "scale": [ 1.70, 1.70, 0.935 ]
     },
     "thirdperson_lefthand": {
-      "rotation": [ 0, 90, -55 ],
-      "translation": [ 0, 6.0, 1.5 ],
+      "rotation": [ 0, 90, -45 ],
+      "translation": [ 0, 8.0, 2.0 ],
       "scale": [ 1.70, 1.70, 0.935 ]
     },
     "firstperson_righthand": {

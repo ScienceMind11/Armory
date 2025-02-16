@@ -12,11 +12,18 @@ import net.minecraft.util.Identifier;
 
 public class LongswordItem extends SwordItem {
 
-    public LongswordItem(ToolMaterial material, boolean fireproof) {
+    private final Identifier heldModel;
+
+    public LongswordItem(ToolMaterial material, boolean fireproof, String heldModelId) {
         super(
                 material,
                 ArmoryItems.getSettings(material, fireproof, 4, -2.7F)
         );
+        this.heldModel = Armory.id(heldModelId);
+    }
+
+    public Identifier getHeldModel() {
+        return heldModel;
     }
 
 }

@@ -6,6 +6,8 @@ import net.mercury.armory.Armory;
 import net.mercury.armory.registry.ArmoryItems;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.OverlayTexture;
+import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
@@ -50,9 +52,9 @@ public class ScytheEntityRenderer extends EntityRenderer<ScytheEntity> {
 
             long worldTime = entity.getWorld().getTime();
             float rotation = (worldTime + tickDelta) * -5;
-            if(!(entity.isInsideWall() || entity.isOnGround())) matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(rotation));
+            if(!entity.isOnGround()) matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(rotation));
 
-            matrices.translate(0.5F, -0.1F, 0.0F);
+            matrices.translate(0.25F, -0.15F, 0.0F);
 
             ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
             itemRenderer.renderItem(

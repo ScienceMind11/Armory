@@ -1,7 +1,24 @@
 {
 
   "item.armory.scythe": "Scythe",
+  "item.armory.glaive": "Glaive",
 
-  "entity.armory.scythe": "Scythe"
+  "item.armory.wooden_dagger": "Wooden Dagger",
+  "item.armory.stone_dagger": "Stone Dagger",
+  "item.armory.iron_dagger": "Iron Dagger",
+  "item.armory.golden_dagger": "Golden Dagger",
+  "item.armory.diamond_dagger": "Diamond Dagger",
+  "item.armory.netherite_dagger": "Netherite Dagger",
+
+  "item.armory.wooden_longsword": "Wooden Longsword",
+  "item.armory.stone_longsword": "Stone Longsword",
+  "item.armory.iron_longsword": "Iron Longsword",
+  "item.armory.golden_longsword": "Golden Longsword",
+  "item.armory.diamond_longsword": "Diamond Longsword",
+  "item.armory.netherite_longsword": "Netherite Longsword",
+
+  "entity.armory.scythe": "Scythe",
+
+  "sound.armory.scythe": "Scythe hits"
 
 }
