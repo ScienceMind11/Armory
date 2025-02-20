@@ -1,12 +1,10 @@
 package net.mercury.armory.registry;
 
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.mercury.armory.Armory;
 import net.mercury.armory.entity.ScytheEntity;
-import net.minecraft.entity.*;
-import net.minecraft.entity.attribute.DefaultAttributeRegistry;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 

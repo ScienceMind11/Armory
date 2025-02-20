@@ -6,13 +6,9 @@ import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.mercury.armory.entity.ScytheEntityRenderer;
 import net.mercury.armory.registry.ArmoryEntities;
-import net.mercury.armory.registry.ArmoryItems;
 import net.mercury.armory.registry.ArmoryParticles;
 import net.mercury.armory.registry.ArmoryWeaponSkins;
-import net.mercury.armory.skin.WeaponSkin;
 import net.minecraft.client.particle.SweepAttackParticle;
-
-import java.lang.reflect.Field;
 
 public class ArmoryClient implements ClientModInitializer {
 

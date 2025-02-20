@@ -1,0 +1,6 @@
+{
+  "parent": "armory:item/hand/scythe",
+  "textures": {
+    "layer0": "armory:item/scythe/devilsknife"
+  }
+}

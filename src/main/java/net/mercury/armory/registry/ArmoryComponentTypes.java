@@ -1,6 +1,5 @@
 package net.mercury.armory.registry;
 
-import com.mojang.serialization.Codec;
 import net.mercury.armory.Armory;
 import net.mercury.armory.skin.WeaponSkin;
 import net.minecraft.component.ComponentType;

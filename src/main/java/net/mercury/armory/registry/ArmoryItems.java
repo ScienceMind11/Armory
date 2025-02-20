@@ -6,12 +6,9 @@ import net.mercury.armory.item.DaggerItem;
 import net.mercury.armory.item.LongswordItem;
 import net.mercury.armory.item.unique.GlaiveItem;
 import net.mercury.armory.item.unique.ScytheItem;
-import net.minecraft.component.type.AttributeModifierSlot;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
@@ -96,7 +93,9 @@ public class ArmoryItems {
             entries.addAfter(
                     Items.MACE,
                     SCYTHE,
-                    GLAIVE
+                    GLAIVE/*,
+                    HALBERD,
+                    GREATAXE*/
             );
 
         });

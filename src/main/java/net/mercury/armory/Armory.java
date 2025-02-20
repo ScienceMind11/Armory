@@ -5,7 +5,6 @@ import net.mercury.armory.registry.ArmoryEntities;
 import net.mercury.armory.registry.ArmoryItems;
 import net.mercury.armory.registry.ArmorySounds;
 import net.minecraft.util.Identifier;
-import org.apache.logging.log4j.LogManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

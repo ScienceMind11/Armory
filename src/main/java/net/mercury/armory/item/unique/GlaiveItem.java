@@ -1,13 +1,10 @@
 package net.mercury.armory.item.unique;
 
-import net.mercury.armory.Armory;
 import net.mercury.armory.registry.ArmoryComponentTypes;
 import net.mercury.armory.registry.ArmoryItems;
 import net.mercury.armory.registry.ArmoryWeaponSkins;
-import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
 public class GlaiveItem extends SwordItem{

@@ -10,8 +10,6 @@ import net.minecraft.util.math.random.Random;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-import java.util.random.RandomGenerator;
-
 @Mixin(WitherSkeletonEntity.class)
 public class WitherSkeletonEntityMixin {
 

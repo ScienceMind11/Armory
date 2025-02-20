@@ -1,24 +1,19 @@
 package net.mercury.armory.item.unique;
 
-import net.mercury.armory.Armory;
-import net.mercury.armory.ArmoryClient;
 import net.mercury.armory.entity.ScytheEntity;
 import net.mercury.armory.registry.ArmoryComponentTypes;
 import net.mercury.armory.registry.ArmoryItems;
 import net.mercury.armory.registry.ArmoryWeaponSkins;
-import net.minecraft.client.render.model.json.ModelTransformationMode;
-import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
+import net.minecraft.entity.projectile.PersistentProjectileEntity.PickupPermission;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.item.tooltip.TooltipType;
-import net.minecraft.text.Text;
-import net.minecraft.util.*;
+import net.minecraft.util.Hand;
+import net.minecraft.util.Rarity;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
-
-import java.util.List;
 
 public class ScytheItem extends SwordItem {
 
@@ -38,8 +33,8 @@ public class ScytheItem extends SwordItem {
         ScytheEntity entity = new ScytheEntity(world, user, user.getStackInHand(hand));
         entity.setYaw(user.getYaw());
         entity.setPitch(user.getPitch());
-        if(user.isInCreativeMode()) entity.pickupType = PersistentProjectileEntity.PickupPermission.CREATIVE_ONLY;
-        entity.setVelocity(user, user.getPitch(), user.getYaw(), 90.0F, 2.5F, 1.0F);
+        if(user.isInCreativeMode()) entity.pickupType = PickupPermission.CREATIVE_ONLY;
+        entity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 2.5F, 1.0F);
 
         world.spawnEntity(entity);
 

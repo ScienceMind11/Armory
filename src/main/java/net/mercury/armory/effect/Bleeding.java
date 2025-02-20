@@ -1,6 +1,5 @@
 package net.mercury.armory.effect;
 
-import net.mercury.armory.Armory;
 import net.mercury.armory.registry.ArmoryDamageTypes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
