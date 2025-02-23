@@ -8,7 +8,7 @@ import net.minecraft.registry.Registry;
 
 public class ArmoryComponentTypes {
 
-    public static final ComponentType<WeaponSkin> WEAPON_SKIN_COMPONENT = ComponentType.<WeaponSkin>builder().codec(WeaponSkin.CODEC).build();
+    public static final ComponentType<WeaponSkin> WEAPON_SKIN_COMPONENT = ComponentType.<WeaponSkin>builder().codec(WeaponSkin.CODEC).packetCodec(WeaponSkin.PACKET_CODEC).build();
 
     public static void register() {
         registerComponent("weapon_skin", WEAPON_SKIN_COMPONENT);

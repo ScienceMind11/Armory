@@ -27,19 +27,19 @@ public class ScytheItem extends SwordItem {
         );
     }
 
-    @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-
-        ScytheEntity entity = new ScytheEntity(world, user, user.getStackInHand(hand));
-        entity.setYaw(user.getYaw());
-        entity.setPitch(user.getPitch());
-        if(user.isInCreativeMode()) entity.pickupType = PickupPermission.CREATIVE_ONLY;
-        entity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 2.5F, 1.0F);
-
-        world.spawnEntity(entity);
-
-        return super.use(world, user, hand);
-
-    }
+//    @Override
+//    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+//
+//        ScytheEntity entity = new ScytheEntity(world, user, user.getStackInHand(hand));
+//        entity.setYaw(user.getYaw());
+//        entity.setPitch(user.getPitch());
+//        if(user.isInCreativeMode()) entity.pickupType = PickupPermission.CREATIVE_ONLY;
+//        entity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 2.5F, 1.0F);
+//
+//        world.spawnEntity(entity);
+//
+//        return super.use(world, user, hand);
+//
+//    }
 
 }
