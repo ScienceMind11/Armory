@@ -1,6 +1,7 @@
 package net.mercury.armory;
 
 import net.fabricmc.api.ModInitializer;
+import net.mercury.armory.registry.ArmoryComponentTypes;
 import net.mercury.armory.registry.ArmoryEntities;
 import net.mercury.armory.registry.ArmoryItems;
 import net.mercury.armory.registry.ArmorySounds;
@@ -17,8 +18,9 @@ public class Armory implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        ArmoryItems.register();
+        ArmoryComponentTypes.register();
         ArmoryEntities.register();
+        ArmoryItems.register();
         ArmorySounds.register();
 
         LOGGER.info("Successfully loaded");

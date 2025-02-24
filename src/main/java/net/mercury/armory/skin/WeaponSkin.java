@@ -15,7 +15,7 @@ public record WeaponSkin(Identifier guiModel, Identifier handModel) {
             Identifier.CODEC.fieldOf("hand_model").forGetter(WeaponSkin::handModel)
     ).apply(instance, WeaponSkin::new));
 
-    public static final PacketCodec<ByteBuf, WeaponSkin> PACKET_CODEC = new PacketCodec<ByteBuf, WeaponSkin>() {
+    public static final PacketCodec<ByteBuf, WeaponSkin> PACKET_CODEC = new PacketCodec<>() {
         @Override
         public WeaponSkin decode(ByteBuf buf) {
             Identifier guiModel = Identifier.of(StringEncoding.decode(buf, 256), StringEncoding.decode(buf, 256));

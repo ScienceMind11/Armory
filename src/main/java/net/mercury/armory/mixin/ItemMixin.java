@@ -21,15 +21,27 @@ public class ItemMixin {
     @Inject(method = "useOnBlock", at = @At("HEAD"), cancellable = true)
     private void armory$switchWeaponSkins(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir) {
 
-        if(context.getWorld().isClient) cir.setReturnValue(ActionResult.PASS);
-        if(!context.getWorld().getBlockState(context.getBlockPos()).isOf(Blocks.SMITHING_TABLE)) cir.setReturnValue(ActionResult.PASS);
+        if(context.getWorld().isClient) {
+            cir.setReturnValue(ActionResult.PASS);
+            return;
+        }
+        if(!context.getWorld().getBlockState(context.getBlockPos()).isOf(Blocks.SMITHING_TABLE)) {
+            cir.setReturnValue(ActionResult.PASS);
+            return;
+        }
 
         ItemStack stack = context.getStack();
         Item item = stack.getItem();
-        if(!ArmoryWeaponSkins.SKINS.containsKey(item)) cir.setReturnValue(ActionResult.PASS);
+        if(!ArmoryWeaponSkins.SKINS.containsKey(item)) {
+            cir.setReturnValue(ActionResult.PASS);
+            return;
+        }
 
         List<WeaponSkin> possibleSkins = ArmoryWeaponSkins.SKINS.get(item);
-        if(possibleSkins.size() == 1) cir.setReturnValue(ActionResult.PASS);
+        if(possibleSkins.size() == 1) {
+            cir.setReturnValue(ActionResult.PASS);
+            return;
+        }
 
         WeaponSkin currentSkin = stack.get(ArmoryComponentTypes.WEAPON_SKIN_COMPONENT);
         int index = possibleSkins.indexOf(currentSkin);

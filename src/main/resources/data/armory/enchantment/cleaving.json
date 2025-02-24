@@ -1,0 +1,42 @@
+{
+  "anvil_cost": 1,
+  "description": {
+    "translate": "enchantment.armory.cleaving"
+  },
+  "effects": {
+    "minecraft:armor_effectiveness": [
+      {
+        "effect": {
+          "type": "minecraft:multiply",
+          "factor": {
+            "type": "minecraft:linear",
+            "base": 0.1,
+            "per_level_above_first": 0.1
+          }
+        }
+      }
+    ]
+  },
+  "exclusive_set": [],
+  "max_cost": {
+    "base": 12,
+    "per_level_above_first": 8
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 2,
+    "per_level_above_first": 8
+  },
+  "primary_items": [
+    "armory:scythe",
+    "armory:greataxe"
+  ],
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": [
+    "armory:scythe",
+    "armory:greataxe"
+  ],
+  "weight": 7
+}
