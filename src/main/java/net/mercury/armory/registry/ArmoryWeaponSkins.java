@@ -24,6 +24,11 @@ public class ArmoryWeaponSkins {
             Armory.id("item/skin/scythe/devilsknife/hand")
     );
 
+    public static final WeaponSkin CARMINE = new WeaponSkin(
+            Armory.id("item/skin/scythe/carmine/gui"),
+            Armory.id("item/skin/scythe/carmine/hand")
+    );
+
     public static final WeaponSkin DEFAULT_GLAIVE = new WeaponSkin(
             Armory.id("item/glaive"),
             Armory.id("item/hand/glaive")
@@ -38,6 +43,7 @@ public class ArmoryWeaponSkins {
 
         registerSkin(ArmoryItems.SCYTHE, DEFAULT_SCYTHE);
         registerSkin(ArmoryItems.SCYTHE, DEVILSKNIFE);
+        registerSkin(ArmoryItems.SCYTHE, CARMINE);
 
         registerSkin(ArmoryItems.GLAIVE, DEFAULT_GLAIVE);
 

@@ -10,7 +10,11 @@
     "Ascilion",
     "Krimson"
   ],
-  "contact": {},
+  "contact": {
+    "homepage": "https://mercury.nekoweb.org/",
+    "sources": "https://github.com/ScienceMind11/Armory/",
+    "issues": "https://github.com/ScienceMind11/Armory/issues"
+  },
   "license": "GPL-3.0",
   "icon": "assets/armory/icon.png",
   "environment": "*",

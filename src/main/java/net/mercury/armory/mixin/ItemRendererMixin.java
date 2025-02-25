@@ -26,8 +26,7 @@ public class ItemRendererMixin {
     @Unique
     private static final List<ModelTransformationMode> MODES = List.of(
             ModelTransformationMode.GROUND,
-            ModelTransformationMode.GUI,
-            ModelTransformationMode.FIXED
+            ModelTransformationMode.GUI
     );
 
     @Shadow @Final private ItemModels models;

@@ -39,6 +39,8 @@ dependencies {
     modRuntimeOnly("maven.modrinth:cloth-config:${project.cloth_version}")
     modRuntimeOnly("maven.modrinth:modmenu:${project.modmenu_version}")
 
+//    modRuntimeOnly("maven.modrinth:flashback:${project.flashback_version}")
+
 }
 
 processResources {

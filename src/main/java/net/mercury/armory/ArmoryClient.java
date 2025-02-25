@@ -17,11 +17,7 @@ public class ArmoryClient implements ClientModInitializer {
 
         ArmoryWeaponSkins.register();
 
-        ModelLoadingPlugin.register(context -> {
-
-            context.addModels(ArmoryWeaponSkins.MODELS);
-
-        });
+        ModelLoadingPlugin.register(context -> context.addModels(ArmoryWeaponSkins.MODELS));
 
         EntityRendererRegistry.register(ArmoryEntities.SCYTHE, ScytheEntityRenderer::new);
 

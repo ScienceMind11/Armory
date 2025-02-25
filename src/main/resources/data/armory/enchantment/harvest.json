@@ -1,17 +1,17 @@
 {
   "anvil_cost": 1,
   "description": {
-    "translate": "enchantment.armory.cleaving"
+    "translate": "enchantment.armory.harvest"
   },
   "effects": {
-    "minecraft:armor_effectiveness": [
+    "minecraft:mob_experience": [
       {
         "effect": {
           "type": "minecraft:multiply",
           "factor": {
             "type": "minecraft:linear",
-            "base": 0.9,
-            "per_level_above_first": -0.1
+            "base": 1.5,
+            "per_level_above_first": 0.75
           }
         }
       }
@@ -26,16 +26,10 @@
     "base": 2,
     "per_level_above_first": 8
   },
-  "primary_items": [
-    "armory:scythe",
-    "armory:greataxe"
-  ],
+  "primary_items": "armory:scythe",
   "slots": [
     "mainhand"
   ],
-  "supported_items": [
-    "armory:scythe",
-    "armory:greataxe"
-  ],
-  "weight": 7
+  "supported_items": "armory:scythe",
+  "weight": 12
 }
