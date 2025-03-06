@@ -2,6 +2,7 @@ package net.mercury.armory.entity;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.mercury.armory.registry.ArmoryComponentTypes;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -32,7 +33,8 @@ public class ScytheEntityRenderer extends EntityRenderer<ScytheEntity> {
 
         matrices.push();
 
-            ItemStack stack = entity.asItemStack();
+            ItemStack stack = entity.getItemStack().copy();
+            stack.set(ArmoryComponentTypes.WEAPON_SKIN_COMPONENT, entity.getSkin());
 
             float lerpedYaw = MathHelper.lerp(tickDelta, entity.prevYaw, entity.getYaw());
             float lerpedPitch = MathHelper.lerp(tickDelta, entity.prevPitch, entity.getPitch());

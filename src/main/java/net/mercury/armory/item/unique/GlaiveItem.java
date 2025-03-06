@@ -12,7 +12,7 @@ public class GlaiveItem extends SwordItem{
     public GlaiveItem(ToolMaterial material, boolean fireproof) {
         super(
                 material,
-                ArmoryItems.getSettings(material, fireproof, 6, -3.0F).component(
+                ArmoryItems.getSettings(material, fireproof, 6, -3.0F, 1.0F).component(
                         ArmoryComponentTypes.WEAPON_SKIN_COMPONENT,
                         ArmoryWeaponSkins.DEFAULT_GLAIVE
                 ).rarity(Rarity.EPIC)

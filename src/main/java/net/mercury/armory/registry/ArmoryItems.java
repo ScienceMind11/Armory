@@ -6,6 +6,9 @@ import net.mercury.armory.item.DaggerItem;
 import net.mercury.armory.item.LongswordItem;
 import net.mercury.armory.item.unique.GlaiveItem;
 import net.mercury.armory.item.unique.ScytheItem;
+import net.minecraft.component.type.AttributeModifierSlot;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -115,19 +118,23 @@ public class ArmoryItems {
         return settings;
     }
 
-//    public static Item.Settings getSettings(ToolMaterial material, boolean fireproof, int damage, float speed, float reach) {
-//        Item.Settings settings = new Item.Settings();
-//
-//        if(fireproof) settings.fireproof();
-//        settings.attributeModifiers(
-//                SwordItem.createAttributeModifiers(material, damage, speed).with(
-//                        RegistryEntry.of(ReachEntityAttributes.ATTACK_RANGE),
-//                        new EntityAttributeModifier(Armory.id("attack_range"), reach, EntityAttributeModifier.Operation.ADD_VALUE),
-//                        AttributeModifierSlot.MAINHAND
-//                )
-//        );
-//
-//        return settings;
-//    }
+    public static Item.Settings getSettings(ToolMaterial material, boolean fireproof, int damage, float speed, float reach) {
+        Item.Settings settings = new Item.Settings();
+
+        if(fireproof) settings.fireproof();
+        settings.attributeModifiers(SwordItem
+                .createAttributeModifiers(material, damage, speed)
+                .with(
+                        EntityAttributes.PLAYER_ENTITY_INTERACTION_RANGE,
+                        new EntityAttributeModifier(Armory.id("reach"), reach, EntityAttributeModifier.Operation.ADD_VALUE),
+                        AttributeModifierSlot.MAINHAND
+                )
+        );
+
+        return settings;
+    }
+
+
+
 
 }

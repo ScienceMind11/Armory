@@ -3,7 +3,6 @@ package net.mercury.armory.skin;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import io.netty.buffer.ByteBuf;
-import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.network.codec.PacketCodec;
 import net.minecraft.network.encoding.StringEncoding;
 import net.minecraft.util.Identifier;

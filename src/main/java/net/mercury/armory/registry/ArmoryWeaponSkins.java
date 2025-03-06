@@ -41,9 +41,10 @@ public class ArmoryWeaponSkins {
 
     public static void register() {
 
-        registerSkin(ArmoryItems.SCYTHE, DEFAULT_SCYTHE);
-        registerSkin(ArmoryItems.SCYTHE, DEVILSKNIFE);
+        // Register in reverse order from how you want them to cycle for... some reason
         registerSkin(ArmoryItems.SCYTHE, CARMINE);
+        registerSkin(ArmoryItems.SCYTHE, DEVILSKNIFE);
+        registerSkin(ArmoryItems.SCYTHE, DEFAULT_SCYTHE);
 
         registerSkin(ArmoryItems.GLAIVE, DEFAULT_GLAIVE);
 

@@ -2,5 +2,27 @@
   "parent": "armory:item/hand/scythe",
   "textures": {
     "layer0": "armory:item/scythe/carmine"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [ 0, -90, 45 ],
+      "translation": [ 0, 9.0, 3.0 ],
+      "scale": [ 1.70, 1.70, 0.935 ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [ 0, 90, -45 ],
+      "translation": [ 0, 9.0, 1.0 ],
+      "scale": [ 1.70, 1.70, 0.935 ]
+    },
+    "firstperson_righthand": {
+      "rotation": [ 0, -90, 25 ],
+      "translation": [ 1.13, 3.2, 1.13 ],
+      "scale": [ 1.36, 1.36, 0.748 ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [ 0, 90, -25 ],
+      "translation": [ 1.13, 3.2, 1.13 ],
+      "scale": [ 1.36, 1.36, 0.748 ]
+    }
   }
 }

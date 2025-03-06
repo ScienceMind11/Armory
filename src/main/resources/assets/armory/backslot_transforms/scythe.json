@@ -1,8 +1,8 @@
 {
   "item": "armory:scythe",
-  "scale": [ 1.7, 1.7, 1.1 ],
+  "scale": [ 0.425, 0.425, 1.1 ],
   "rotation": [ 0.0, 0.0, 0.0 ],
-  "translation": [ 0.0, 0.0, 0.0 ],
+  "translation": [ 0.035, -0.035, 0.0 ],
   "mode": "FIXED",
   "sway": 0.6
 }
