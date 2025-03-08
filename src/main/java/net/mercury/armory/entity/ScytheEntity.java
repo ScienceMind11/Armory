@@ -9,6 +9,7 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.Vec3d;
@@ -23,7 +24,6 @@ public class ScytheEntity extends PersistentProjectileEntity {
     public ScytheEntity(double x, double y, double z, World world, ItemStack stack, @Nullable ItemStack weapon) {
         super(ArmoryEntities.SCYTHE, x, y, z, world, stack, weapon);
         this.initSkin(stack);
-        this.setNoGravity(true);
     }
 
     public ScytheEntity(World world, PlayerEntity user, ItemStack stack) {
@@ -67,10 +67,11 @@ public class ScytheEntity extends PersistentProjectileEntity {
 
         // Reflect formula: R = V - 2 * (V · N) * N
         double dot = velocity.dotProduct(normal);
-        Vec3d reflected = velocity.subtract(normal.multiply(2 * dot)).multiply(5.0);
+        Vec3d reflected = velocity.subtract(normal.multiply(2 * dot));
 
         this.setVelocity(reflected);
         this.hasHit = true;
+        this.setOnGround(true);
 
     }
 
@@ -79,6 +80,22 @@ public class ScytheEntity extends PersistentProjectileEntity {
         return ArmorySounds.SCYTHE_HIT;
     }
 
+    @Override
+    public void writeCustomDataToNbt(NbtCompound nbt) {
 
+        super.writeCustomDataToNbt(nbt);
+
+        nbt.putInt("skin", this.dataTracker.get(SKIN));
+
+    }
+
+    @Override
+    public void readCustomDataFromNbt(NbtCompound nbt) {
+
+        super.readCustomDataFromNbt(nbt);
+
+        this.dataTracker.set(SKIN, nbt.getInt("skin"));
+
+    }
 
 }
