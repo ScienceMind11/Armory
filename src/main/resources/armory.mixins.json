@@ -4,8 +4,10 @@
   "package": "net.mercury.armory.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "ItemMixin",
+    "PillagerEntityMixin",
     "PlayerEntityMixin",
-    "ItemMixin"
+    "WitherSkeletonEntityMixin"
   ],
   "client": [
     "ItemRendererMixin"

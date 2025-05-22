@@ -12,21 +12,13 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static net.minecraft.item.ToolMaterials.*;
 
 public class ArmoryItems {
 
-    public static final List<Identifier> MODEL_IDS = new ArrayList<>();
-
     public static final Item SCYTHE = new ScytheItem(NETHERITE, true);
     public static final Item GLAIVE = new GlaiveItem(NETHERITE, true);
-    public static final Item HALBERD = new Item(new Item.Settings());
-    public static final Item GREATAXE = new Item(new Item.Settings());
 
     public static final Item WOODEN_DAGGER = new DaggerItem(WOOD, false);
     public static final Item STONE_DAGGER = new DaggerItem(STONE, false);
@@ -46,8 +38,6 @@ public class ArmoryItems {
 
         registerItem("scythe", SCYTHE);
         registerItem("glaive", GLAIVE);
-        registerItem("halberd", HALBERD);
-        registerItem("greataxe", GREATAXE);
 
         registerItem("wooden_dagger", WOODEN_DAGGER);
         registerItem("stone_dagger", STONE_DAGGER);
@@ -96,9 +86,7 @@ public class ArmoryItems {
             entries.addAfter(
                     Items.MACE,
                     SCYTHE,
-                    GLAIVE/*,
-                    HALBERD,
-                    GREATAXE*/
+                    GLAIVE
             );
 
         });
@@ -133,8 +121,5 @@ public class ArmoryItems {
 
         return settings;
     }
-
-
-
 
 }

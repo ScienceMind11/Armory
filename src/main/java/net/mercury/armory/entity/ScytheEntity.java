@@ -12,14 +12,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class ScytheEntity extends PersistentProjectileEntity {
 
     private static final TrackedData<Integer> SKIN = DataTracker.registerData(ScytheEntity.class, TrackedDataHandlerRegistry.INTEGER);
-    private boolean hasHit;
 
     public ScytheEntity(double x, double y, double z, World world, ItemStack stack, @Nullable ItemStack weapon) {
         super(ArmoryEntities.SCYTHE, x, y, z, world, stack, weapon);
@@ -56,23 +54,8 @@ public class ScytheEntity extends PersistentProjectileEntity {
 
     @Override
     protected void onBlockHit(BlockHitResult blockHitResult) {
-
         super.onBlockHit(blockHitResult);
-
-        if(this.hasHit) return;
-
-        Vec3d velocity = this.getVelocity();
-
-        Vec3d normal = new Vec3d(blockHitResult.getSide().getUnitVector());
-
-        // Reflect formula: R = V - 2 * (V · N) * N
-        double dot = velocity.dotProduct(normal);
-        Vec3d reflected = velocity.subtract(normal.multiply(2 * dot));
-
-        this.setVelocity(reflected);
-        this.hasHit = true;
         this.setOnGround(true);
-
     }
 
     @Override
@@ -82,20 +65,14 @@ public class ScytheEntity extends PersistentProjectileEntity {
 
     @Override
     public void writeCustomDataToNbt(NbtCompound nbt) {
-
         super.writeCustomDataToNbt(nbt);
-
         nbt.putInt("skin", this.dataTracker.get(SKIN));
-
     }
 
     @Override
     public void readCustomDataFromNbt(NbtCompound nbt) {
-
         super.readCustomDataFromNbt(nbt);
-
         this.dataTracker.set(SKIN, nbt.getInt("skin"));
-
     }
 
 }

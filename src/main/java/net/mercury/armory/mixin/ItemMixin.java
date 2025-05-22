@@ -25,6 +25,7 @@ public class ItemMixin {
             cir.setReturnValue(ActionResult.PASS);
             return;
         }
+
         if(!context.getWorld().getBlockState(context.getBlockPos()).isOf(Blocks.SMITHING_TABLE)) {
             cir.setReturnValue(ActionResult.PASS);
             return;

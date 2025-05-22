@@ -34,11 +34,6 @@ public class ArmoryWeaponSkins {
             Armory.id("item/hand/glaive")
     );
 
-    public static final WeaponSkin DEFAULT_HALBERD = new WeaponSkin(
-            Armory.id("item/halberd"),
-            Armory.id("item/hand/halberd")
-    );
-
     public static void register() {
 
         // Register in reverse order from how you want them to cycle for... some reason
@@ -47,8 +42,6 @@ public class ArmoryWeaponSkins {
         registerSkin(ArmoryItems.SCYTHE, DEFAULT_SCYTHE);
 
         registerSkin(ArmoryItems.GLAIVE, DEFAULT_GLAIVE);
-
-        registerSkin(ArmoryItems.HALBERD, DEFAULT_HALBERD);
 
     }
 

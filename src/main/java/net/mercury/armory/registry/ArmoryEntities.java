@@ -19,9 +19,7 @@ public class ArmoryEntities {
     );
 
     public static void register() {
-
         registerEntity("scythe", SCYTHE);
-
     }
 
     public static void registerEntity(String name, EntityType<?> entityType) {

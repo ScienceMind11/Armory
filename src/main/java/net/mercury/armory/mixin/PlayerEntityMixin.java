@@ -17,13 +17,11 @@ public class PlayerEntityMixin {
 
     @WrapOperation(method = "attack", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/player/PlayerEntity;spawnSweepAttackParticles()V"))
     private void armory$customScytheSweep(PlayerEntity instance, Operation<Void> original) {
-
         if(instance.getEquippedStack(EquipmentSlot.MAINHAND).isOf(ArmoryItems.SCYTHE)) {
             spawnCustomScytheSweep();
         } else {
             original.call(instance);
         }
-
     }
 
     @Unique

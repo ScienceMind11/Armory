@@ -2,8 +2,6 @@
 
   "item.armory.scythe": "Scythe",
   "item.armory.glaive": "Glaive",
-  "item.armory.halberd": "Halberd",
-  "item.armory.greataxe": "Greataxe",
 
   "item.armory.wooden_dagger": "Wooden Dagger",
   "item.armory.stone_dagger": "Stone Dagger",
@@ -18,9 +16,6 @@
   "item.armory.golden_longsword": "Golden Longsword",
   "item.armory.diamond_longsword": "Diamond Longsword",
   "item.armory.netherite_longsword": "Netherite Longsword",
-
-  "enchantment.armory.cleaving": "Cleaving",
-  "enchantment.armory.harvest": "Harvest",
 
   "entity.armory.scythe": "Scythe",
 

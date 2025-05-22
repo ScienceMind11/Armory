@@ -13,13 +13,6 @@ base {
 
 repositories {
 
-    maven {
-        url "https://maven.jamieswhiteshirt.com/libs-release"
-        content {
-            includeGroup "com.jamieswhiteshirt"
-        }
-    }
-
     maven { url "https://api.modrinth.com/maven" }
 
 }
@@ -33,13 +26,9 @@ dependencies {
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-//    modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.rea_version}")
-
     modRuntimeOnly("maven.modrinth:combat-amenities:${project.ca_version}")
     modRuntimeOnly("maven.modrinth:cloth-config:${project.cloth_version}")
     modRuntimeOnly("maven.modrinth:modmenu:${project.modmenu_version}")
-
-//    modRuntimeOnly("maven.modrinth:flashback:${project.flashback_version}")
 
 }
 
