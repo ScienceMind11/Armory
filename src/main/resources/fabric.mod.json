@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "armory",
+	"version": "${version}",
+	"name": "Armory",
+	"description": "A mod that adds many new weapons",
+	"authors": [
+		"Mercury",
+		"Sember",
+		"Hollowed",
+		"Ascilion"
+	],
+	"license": "CC0-1.0",
+	"icon": "assets/armory/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.mercury.armory.Armory"
+		],
+		"fabric-datagen": [
+			"net.mercury.armory.ArmoryDataGenerator"
+		]
+	},
+	"mixins": [
+		"armory.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~26.1-",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
