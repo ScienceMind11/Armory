@@ -1,6 +1,7 @@
 package net.mercury.armory.registry;
 
 import net.mercury.armory.Armory;
+import net.mercury.armory.item.ScytheItem;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -12,7 +13,7 @@ import java.util.function.Function;
 
 public class ArmoryItems {
 
-    public static final Item SCYTHE = registerItem("scythe", Item::new);
+    public static final Item SCYTHE = registerItem("scythe", ScytheItem::new);
 
     public static void register() {
 
