@@ -1,7 +1,6 @@
 package net.mercury.armory.skin;
 
-public record WeaponSkin() {
+import net.minecraft.client.renderer.item.ItemModel;
+import net.minecraft.resources.Identifier;
 
-
-
-}
+public record WeaponSkin(Identifier id, ItemModel.Unbaked model) {}
