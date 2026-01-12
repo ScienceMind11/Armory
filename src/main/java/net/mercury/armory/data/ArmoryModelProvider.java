@@ -98,13 +98,13 @@ public class ArmoryModelProvider extends FabricModelProvider {
         return (item, generator) -> {
             ItemModel.Unbaked handheld = ItemModelUtils.plainModel(generator.createFlatItemModel(
                     item,
-                    skin.getPath() + "_handheld",
+                    "/hand/" + skin.getPath(),
                     LARGE
             ));
 
             ItemModel.Unbaked gui = ItemModelUtils.plainModel(generator.createFlatItemModel(
                     item,
-                    skin.getPath() + "_gui",
+                    "/" + skin.getPath(),
                     ModelTemplates.FLAT_ITEM
             ));
 

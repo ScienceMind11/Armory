@@ -2,6 +2,8 @@ package net.mercury.armory;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.mercury.armory.registry.ArmoryComponents;
+import net.mercury.armory.registry.ArmoryItems;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
@@ -17,7 +19,12 @@ public class Armory implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+		ArmoryComponents.register();
+		ArmoryItems.register();
+
 		LOGGER.info("Successfully initialized.");
+
 	}
 
 	public static Identifier id(String path) {
