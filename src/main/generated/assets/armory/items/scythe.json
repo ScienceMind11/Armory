@@ -1,0 +1,117 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "cases": [
+      {
+        "model": {
+          "type": "minecraft:select",
+          "cases": [
+            {
+              "model": {
+                "type": "minecraft:model",
+                "model": "armory:item/scythe/hand/default"
+              },
+              "when": [
+                "firstperson_lefthand",
+                "firstperson_righthand",
+                "thirdperson_lefthand",
+                "thirdperson_righthand",
+                "ground",
+                "head"
+              ]
+            },
+            {
+              "model": {
+                "type": "minecraft:model",
+                "model": "armory:item/scythe/default"
+              },
+              "when": [
+                "gui",
+                "fixed",
+                "on_shelf"
+              ]
+            }
+          ],
+          "property": "minecraft:display_context"
+        },
+        "when": {
+          "skin": "armory:default"
+        }
+      },
+      {
+        "model": {
+          "type": "minecraft:select",
+          "cases": [
+            {
+              "model": {
+                "type": "minecraft:model",
+                "model": "armory:item/scythe/hand/carmine"
+              },
+              "when": [
+                "firstperson_lefthand",
+                "firstperson_righthand",
+                "thirdperson_lefthand",
+                "thirdperson_righthand",
+                "ground",
+                "head"
+              ]
+            },
+            {
+              "model": {
+                "type": "minecraft:model",
+                "model": "armory:item/scythe/carmine"
+              },
+              "when": [
+                "gui",
+                "fixed",
+                "on_shelf"
+              ]
+            }
+          ],
+          "property": "minecraft:display_context"
+        },
+        "when": {
+          "skin": "armory:carmine"
+        }
+      },
+      {
+        "model": {
+          "type": "minecraft:select",
+          "cases": [
+            {
+              "model": {
+                "type": "minecraft:model",
+                "model": "armory:item/scythe/hand/devilsknife"
+              },
+              "when": [
+                "firstperson_lefthand",
+                "firstperson_righthand",
+                "thirdperson_lefthand",
+                "thirdperson_righthand",
+                "ground",
+                "head"
+              ]
+            },
+            {
+              "model": {
+                "type": "minecraft:model",
+                "model": "armory:item/scythe/devilsknife"
+              },
+              "when": [
+                "gui",
+                "fixed",
+                "on_shelf"
+              ]
+            }
+          ],
+          "property": "minecraft:display_context"
+        },
+        "when": {
+          "skin": "armory:devilsknife"
+        }
+      }
+    ],
+    "component": "armory:weapon_skin",
+    "property": "minecraft:component"
+  }
+}

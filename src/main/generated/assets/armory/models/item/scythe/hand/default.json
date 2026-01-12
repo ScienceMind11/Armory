@@ -1,0 +1,6 @@
+{
+  "parent": "armory:item/large",
+  "textures": {
+    "layer0": "armory:item/scythe/hand/default"
+  }
+}
