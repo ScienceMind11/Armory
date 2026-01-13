@@ -1,0 +1,6 @@
+{
+  "parent": "armory:item/large",
+  "textures": {
+    "layer0": "armory:item/glaive/hand/default"
+  }
+}

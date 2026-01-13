@@ -1,5 +1,8 @@
 // 26.1-snapshot-2	-999999999-01-01T00:00:00	Armory/Model Definitions
+0ed9fa3c4636c9e16e1e4fb53efff9dbec1d6a4e assets/armory/items/glaive.json
 59367add1dd0e4b1c33c1461a884867984e52d2b assets/armory/items/scythe.json
+3a20f4562ca064cc99e71a3cc994f55a7e9c187e assets/armory/models/item/glaive/default.json
+fbf155f6c8b8ab030fb3511664850d8c0789c7c6 assets/armory/models/item/glaive/hand/default.json
 a8754d5b0bdda7469db593d765504cbfd3b43eca assets/armory/models/item/scythe/carmine.json
 33c75e31cf8644fc7109e7b3758e41caa6840419 assets/armory/models/item/scythe/default.json
 6ccbdd390685120e9258c5755a147bc21ca81089 assets/armory/models/item/scythe/devilsknife.json

@@ -23,6 +23,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.Items;
+import org.jetbrains.annotations.NotNull;
 
 import java.lang.classfile.instruction.SwitchCase;
 import java.util.*;
@@ -52,12 +53,18 @@ public class ArmoryModelProvider extends FabricModelProvider {
     }
 
     @Override
-    public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
+    public void generateBlockStateModels(BlockModelGenerators generator) {
 
     }
 
     @Override
     public void generateItemModels(ItemModelGenerators generator) {
+
+        registerAllSkins(
+                ArmoryItems.GLAIVE,
+                generator,
+                createSkin(Armory.id("default"))
+        );
 
         registerAllSkins(
                 ArmoryItems.SCYTHE,
@@ -69,6 +76,7 @@ public class ArmoryModelProvider extends FabricModelProvider {
 
     }
 
+    @SafeVarargs
     private static void registerAllSkins(
             Item item,
             ItemModelGenerators generator,
