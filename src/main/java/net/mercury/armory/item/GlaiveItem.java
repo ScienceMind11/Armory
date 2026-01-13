@@ -2,7 +2,6 @@ package net.mercury.armory.item;
 
 import net.mercury.armory.Armory;
 import net.mercury.armory.registry.ArmoryComponents;
-import net.minecraft.core.component.DataComponentType;
 import net.minecraft.world.item.Item;
 
 public class GlaiveItem extends Item {

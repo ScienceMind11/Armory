@@ -1,7 +1,6 @@
 package net.mercury.armory;
 
 import net.fabricmc.api.ModInitializer;
-
 import net.mercury.armory.registry.ArmoryComponents;
 import net.mercury.armory.registry.ArmoryItems;
 import net.minecraft.core.Registry;
@@ -9,7 +8,6 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class Armory implements ModInitializer {
 
